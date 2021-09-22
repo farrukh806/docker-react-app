@@ -5,5 +5,7 @@ services:
 before_install:
     - docker build -t farrukh806/docker-react-app -f Dockerfile.dev .
 
+sudo: required
+
 script:
     - docker run farrukh806/docker-react-app npm run test -- --coverage
