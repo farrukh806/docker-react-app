@@ -7,4 +7,4 @@ before_install:
 
 
 script:
-    - docker run farrukh806/docker-react-app npm run test
+    - docker run farrukh806/docker-react-app npm run test --forceExit
