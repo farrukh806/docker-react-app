@@ -8,4 +8,5 @@ before_install:
 sudo: required
 
 script:
-    - docker run farrukh806/docker-react-app npm run test -- --coverage
+    - docker run farrukh806/docker-react-app npm run test 
+    - docker run farrukh806/docker-react-app npm run coveralls
