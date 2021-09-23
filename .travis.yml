@@ -5,8 +5,8 @@ services:
 before_install:
     - docker build -t farrukh806/docker-react-app -f Dockerfile.dev .
 
-# script:
-# - docker run farrukh806/docker-react-app npm run test
+script:
+    - docker run farrukh806/docker-react-app npm run test
 
 deploy:
     provider: heroku

@@ -3,14 +3,11 @@ FROM node:alpine
 
 WORKDIR '/app'
 
-# COPY package.json .
 COPY package.json .
 
 RUN  npm install 
-USER node
 
 COPY . .
 
-USER node
 CMD  ["npm","start"]
 
