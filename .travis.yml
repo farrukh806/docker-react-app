@@ -5,6 +5,14 @@ services:
 before_install:
     - docker build -t farrukh806/docker-react-app -f Dockerfile.dev .
 
-script:
-    - docker run farrukh806/docker-react-app npm run test -- --coverage
-    - docker run farrukh806/docker-react-app npm run
+# script:
+# - docker run farrukh806/docker-react-app npm run test
+
+deploy:
+    provider: heroku
+    api_key:
+        secure: '$HEROKU_ACCESS_KEY'
+    app: 'dockerreactapp'
+    skip_cleanup: true
+    on:
+        branch: master
